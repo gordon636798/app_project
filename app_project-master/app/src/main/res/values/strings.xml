@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">bangDream</string>
+    <!--
+    <string-array name="name">
+    </string-array>>
+    -->
+    <string-array name="skill">
+        <item>boost</item>
+        <item>boost</item>
+        <item>boost</item>
+        <item>boost</item>
+        <item>boost</item>
+        <item>boost</item>
+        <item>boost</item>
+        <item>boost</item>
+        <item>boost</item>
+    </string-array>
+
+    <string-array name="band">
+        <item>HMW</item>
+        <item>HMW</item>
+        <item>HMW</item>
+        <item>HMW</item>
+        <item>HMW</item>
+        <item>HMW</item>
+        <item>HMW</item>
+        <item>HMW</item>
+        <item>HMW</item>
+    </string-array>
+
+    <string-array name="attr">
+        <item>red</item>
+        <item>red</item>
+        <item>red</item>
+        <item>red</item>
+        <item>red</item>
+        <item>red</item>
+        <item>red</item>
+        <item>red</item>
+        <item>red</item>
+    </string-array>
+
+    <string-array name="pic">
+        <item>@drawable/p1</item>
+        <item>@drawable/p2</item>
+        <item>@drawable/p3</item>
+        <item>@drawable/p4</item>
+        <item>@drawable/p5</item>
+        <item>@drawable/p6</item>
+        <item>@drawable/p7</item>
+        <item>@drawable/p8</item>
+        <item>@drawable/p9</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>>
+</resources>
