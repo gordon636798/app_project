@@ -17,6 +17,14 @@
                     android:layout_height="80dp"
                     android:layout_margin="1pt"
                     tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="23dp"
+                    android:layout_height="22dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/check"
+                    tools:srcCompat="@tools:sample/avatars" />
                 <!--
                 <CheckBox
                     android:id="@+id/checkBox"

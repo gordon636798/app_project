@@ -38,7 +38,7 @@ public class select_fragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_select_fragment, container, false);
 
-        /* A1[0] = (CheckBox) view.findViewById(R.id.red);
+        A1[0] = (CheckBox) view.findViewById(R.id.red);
         A1[1] = (CheckBox) view.findViewById(R.id.blue);
         A1[2] = (CheckBox) view.findViewById(R.id.green);
         A1[3] = (CheckBox) view.findViewById(R.id.orange);
@@ -60,7 +60,7 @@ public class select_fragment extends Fragment {
                 public void onClick(View v) {
 
                 }
-            });*/
+            });
        for(int i=0;i<4;i++) {
            if (A1[i].isChecked()) {
                 A1_CB[i]=true;
