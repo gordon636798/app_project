@@ -24,6 +24,7 @@
                     android:layout_height="22dp"
                     android:layout_weight="1"
                     android:src="@drawable/check"
+                    android:visibility="invisible"
                     tools:srcCompat="@tools:sample/avatars" />
                 <!--
                 <CheckBox

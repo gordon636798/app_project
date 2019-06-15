@@ -10,8 +10,9 @@ public class Card {
     public String skill;
     public String score;
     public int pic;
+    public boolean holder;
 
-    public Card(String name,String band,String attr,String skill,String score,int pic)
+    public Card(String name,String band,String attr,String skill,String score,int pic,boolean holder)
     {
         this.name = name;
         this.band = band;
@@ -19,6 +20,7 @@ public class Card {
         this.skill = skill;
         this.score = score;
         this.pic = pic;
+        this.holder=holder;
     }
 
 }

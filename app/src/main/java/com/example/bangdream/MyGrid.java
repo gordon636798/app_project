@@ -2,6 +2,8 @@ package com.example.bangdream;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.Drawable;
 import android.text.Html;
 import android.util.Log;
@@ -21,6 +23,7 @@ public class MyGrid extends BaseAdapter {
     private Context c;
     ArrayList<Card> cards;
     ImageView iv;
+    ImageView iv2;
 
     public MyGrid(Context c , ArrayList<Card> cards)
     {
@@ -41,6 +44,7 @@ public class MyGrid extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
+
         return position;
     }
 
@@ -49,9 +53,16 @@ public class MyGrid extends BaseAdapter {
         LayoutInflater lif = LayoutInflater.from(c);
         convertView =  lif.inflate(R.layout.mygrid,null);
 
+
+
         iv = convertView.findViewById(R.id.imageView);
         Log.i("ggggg", "getView: "+cards.get(position).pic);
         iv.setImageResource(cards.get(position).pic);
+        iv2 = convertView.findViewById(R.id.imageView2);
+        if(cards.get(position).holder)
+            iv2.setVisibility(View.VISIBLE);
+        else
+            iv2.setVisibility(View.INVISIBLE);
        // ImageView iv2 = convertView.findViewById(R.id.imageView2);
         //iv2.setImageResource(R.drawable.check);
         return convertView;
