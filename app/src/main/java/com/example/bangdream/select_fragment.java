@@ -29,6 +29,8 @@ public class select_fragment extends Fragment {
     String[] b1 = {"PPP","af","PP","R","HHW"};
     CheckBox[] A1 = new CheckBox[4];
     CheckBox[] B1 = new CheckBox[5];
+    Button OK;
+    Button RESET;
     Boolean[] A1_CB={false,false,false,false};
     Boolean[] B1_CB={false,false,false,false,false};
     Bundle bundle=new Bundle();
@@ -56,6 +58,44 @@ public class select_fragment extends Fragment {
         B1[2]=(CheckBox) view.findViewById(R.id.PP);
         B1[3]=(CheckBox) view.findViewById(R.id.R);
         B1[4]=(CheckBox) view.findViewById(R.id.HHW);
+        OK=(Button)view.findViewById(R.id.OK);
+        RESET=(Button)view.findViewById(R.id.RESET);
+        OK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i=0;i<4;i++)
+                {
+                    if(A1_CB[i])
+                        bundle.putInt(a1[i],1);
+                    else
+                        bundle.putInt(a1[i],0);
+                }
+                for(int i=0;i<5;i++)
+                {
+                    if(B1_CB[i])
+                        bundle.putInt(b1[i],1);
+                    else
+                        bundle.putInt(b1[i],0);
+                }
+                bundle.clear();
+            }
+        });
+        RESET.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.clear();
+                for(int i=0;i<4;i++)
+                {
+                    A1_CB[i] = false;
+                    A1[i].setChecked(false);
+                }
+                for (int i=0;i<5;i++)
+                {
+                    B1_CB[i] = false;
+                    B1[i].setChecked(false);
+                }
+            }
+        });
        for(int i=0;i<4;i++)
             A1[i].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,21 +113,25 @@ public class select_fragment extends Fragment {
        for(int i=0;i<4;i++) {
            if (A1[i].isChecked()) {
                 A1_CB[i]=true;
+
                 //bundle.putInt(a1[i],1);
            }
            else {
                A1_CB[i] = false;
                //bundle.putInt(a1[i],0);
+
            }
        }
         for(int i=0;i<5;i++) {
             if (B1[i].isChecked()) {
                 B1_CB[i]=true;
+
                 //bundle.putInt(b1[i],1);
             }
             else {
                 B1_CB[i] = false;
                 //bundle.putInt(b1[i],0);
+
             }
         }
         CHECK();
