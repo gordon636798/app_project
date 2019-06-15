@@ -62,8 +62,8 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
             values.put(MySQLiteOpenHelper.CONTACT_NAME, name[i]);
             values.put(MySQLiteOpenHelper.CONTACT_BAND, band[i]);
             values.put(MySQLiteOpenHelper.CONTACT_ATTR, attr[i]);
-            values.put(MySQLiteOpenHelper.CONTACT_SKILL, attr[i]);
-            values.put(MySQLiteOpenHelper.CONTACT_SCORE, attr[i]);
+            values.put(MySQLiteOpenHelper.CONTACT_SKILL, skill[i]);
+            values.put(MySQLiteOpenHelper.CONTACT_SCORE, score[i]);
             values.put(MySQLiteOpenHelper.CONTACT_PIC, pic.getResourceId(i,0));
             values.put(MySQLiteOpenHelper.CONTACT_HOLDER, "false");
 

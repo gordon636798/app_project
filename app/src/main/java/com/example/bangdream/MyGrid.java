@@ -59,7 +59,7 @@ public class MyGrid extends BaseAdapter {
 
 
         iv = convertView.findViewById(R.id.imageView);
-        Log.i("ggggg", "getView: "+cards.get(position).name);
+        //Log.i("ggggg", "getView: "+cards.get(position).name);
         iv.setImageResource(cards.get(position).pic);
         iv2 = convertView.findViewById(R.id.imageView2);
         if(cards.get(position).holder)

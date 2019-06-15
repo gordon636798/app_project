@@ -58,28 +58,8 @@ public class select_fragment extends Fragment {
         B1[2]=(CheckBox) view.findViewById(R.id.PP);
         B1[3]=(CheckBox) view.findViewById(R.id.R);
         B1[4]=(CheckBox) view.findViewById(R.id.HHW);
-        OK=(Button)view.findViewById(R.id.OK);
         RESET=(Button)view.findViewById(R.id.RESET);
-        OK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for(int i=0;i<4;i++)
-                {
-                    if(A1_CB[i])
-                        bundle.putInt(a1[i],1);
-                    else
-                        bundle.putInt(a1[i],0);
-                }
-                for(int i=0;i<5;i++)
-                {
-                    if(B1_CB[i])
-                        bundle.putInt(b1[i],1);
-                    else
-                        bundle.putInt(b1[i],0);
-                }
-                bundle.clear();
-            }
-        });
+
         RESET.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -146,6 +126,23 @@ public class select_fragment extends Fragment {
             }
         });
 
+        Button btnMatch = view.findViewById(R.id.match);
+        btnMatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GridShow gs = new GridShow();
+                Bundle bundle2 = new Bundle();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                bundle2.putStringArrayList("attr",attr);
+                bundle2.putStringArrayList("band",band);
+                bundle2.putBoolean("match",true);
+                ft.replace(R.id.fm2,gs);
+                gs.setArguments(bundle2);
+                ft.commit();
+            }
+        });
+
         return view;
 
 
@@ -175,19 +172,19 @@ public class select_fragment extends Fragment {
         }
         if(B1[0].isChecked())
         {
-            attr.add("Happy");
+            band.add("ppp");
         }
         if(B1[1].isChecked())
         {
-            band.add("ppp");
+            band.add("af");
         }
         if(B1[2].isChecked())
         {
-            band.add("af");
+            band.add("p*p");
         }
         if(B1[3].isChecked())
         {
-            band.add("p*p");
+            band.add("R");
         }
         if(B1[4].isChecked())
         {
@@ -200,6 +197,7 @@ public class select_fragment extends Fragment {
         FragmentTransaction ft = fm.beginTransaction();
         bundle2.putStringArrayList("attr",attr);
         bundle2.putStringArrayList("band",band);
+        bundle2.putBoolean("match",false);
         ft.replace(R.id.fm2,gs);
         gs.setArguments(bundle2);
         ft.commit();
