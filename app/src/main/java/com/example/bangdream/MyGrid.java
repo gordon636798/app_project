@@ -24,11 +24,13 @@ public class MyGrid extends BaseAdapter {
     ArrayList<Card> cards;
     ImageView iv;
     ImageView iv2;
+    int mCurrentPos;
 
     public MyGrid(Context c , ArrayList<Card> cards)
     {
         this.c = c;
         this.cards = cards;
+        Log.i("SSSSSSSSSSS", "MyGrid: "+cards.size());
 
     }
     @Override
@@ -39,11 +41,12 @@ public class MyGrid extends BaseAdapter {
     @Override
     public Object getItem(int position) {
 
-        return cards.get(position).name;
+        return cards.get(position).primary;
     }
 
     @Override
     public long getItemId(int position) {
+
 
         return position;
     }
@@ -56,7 +59,7 @@ public class MyGrid extends BaseAdapter {
 
 
         iv = convertView.findViewById(R.id.imageView);
-        Log.i("ggggg", "getView: "+cards.get(position).pic);
+        Log.i("ggggg", "getView: "+cards.get(position).name);
         iv.setImageResource(cards.get(position).pic);
         iv2 = convertView.findViewById(R.id.imageView2);
         if(cards.get(position).holder)

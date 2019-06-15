@@ -10,18 +10,24 @@
 
     <FrameLayout
         android:id="@+id/fm1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </FrameLayout>
 
-    <GridView
-        android:id="@+id/GV"
+    <FrameLayout
+        android:id="@+id/fm2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnWidth="50dp"
-        android:gravity="center"
-        android:numColumns="5"
-        android:stretchMode="columnWidth"
-        android:listSelector="@drawable/grid_item"/>
+        android:layout_height="wrap_content">
+
+        <!--GridView
+            android:id="@+id/GV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="50dp"
+            android:gravity="center"
+            android:listSelector="@drawable/grid_item"
+            android:numColumns="5"
+            android:stretchMode="columnWidth" /-->
+    </FrameLayout>
 </LinearLayout>

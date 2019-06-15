@@ -1,8 +1,13 @@
 package com.example.bangdream;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentHostCallback;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +32,10 @@ public class select_fragment extends Fragment {
     Boolean[] A1_CB={false,false,false,false};
     Boolean[] B1_CB={false,false,false,false,false};
     Bundle bundle=new Bundle();
+
+    ArrayList<String> attr = new ArrayList<String>();
+    ArrayList<String> band = new ArrayList<String>();
+
     public select_fragment() {
         // Required empty public constructor
     }
@@ -64,24 +73,92 @@ public class select_fragment extends Fragment {
        for(int i=0;i<4;i++) {
            if (A1[i].isChecked()) {
                 A1_CB[i]=true;
-                bundle.putInt(a1[i],1);
+                //bundle.putInt(a1[i],1);
            }
            else {
                A1_CB[i] = false;
-               bundle.putInt(a1[i],0);
+               //bundle.putInt(a1[i],0);
            }
        }
         for(int i=0;i<5;i++) {
             if (B1[i].isChecked()) {
                 B1_CB[i]=true;
-                bundle.putInt(b1[i],1);
+                //bundle.putInt(b1[i],1);
             }
             else {
                 B1_CB[i] = false;
-                bundle.putInt(b1[i],0);
+                //bundle.putInt(b1[i],0);
             }
         }
-        return inflater.inflate(R.layout.fragment_select_fragment, container, false);
+        CHECK();
+
+        Button btOK =view.findViewById(R.id.OK);
+
+        btOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CHECK();
+
+            }
+        });
+
+        return view;
+
+
+    }
+
+    public void CHECK()
+    {
+        attr = new ArrayList<String>();
+        band = new ArrayList<String>();
+
+        if(A1[0].isChecked())
+        {
+            Log.i("SSSS", "onClick: "+A1[0].isChecked());
+            attr.add("Powerful");
+        }
+        if(A1[1].isChecked())
+        {
+            attr.add("Cool");
+        }
+        if(A1[2].isChecked())
+        {
+            attr.add("Pure");
+        }
+        if(A1[3].isChecked())
+        {
+            attr.add("Happy");
+        }
+        if(B1[0].isChecked())
+        {
+            attr.add("Happy");
+        }
+        if(B1[1].isChecked())
+        {
+            band.add("ppp");
+        }
+        if(B1[2].isChecked())
+        {
+            band.add("af");
+        }
+        if(B1[3].isChecked())
+        {
+            band.add("p*p");
+        }
+        if(B1[4].isChecked())
+        {
+            band.add("hhw");
+        }
+
+        GridShow gs = new GridShow();
+        Bundle bundle2 = new Bundle();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        bundle2.putStringArrayList("attr",attr);
+        bundle2.putStringArrayList("band",band);
+        ft.replace(R.id.fm2,gs);
+        gs.setArguments(bundle2);
+        ft.commit();
     }
 
 }

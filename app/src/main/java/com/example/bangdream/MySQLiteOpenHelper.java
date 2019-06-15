@@ -4,6 +4,7 @@ package com.example.bangdream;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -70,10 +71,28 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
 
             db.insert(MySQLiteOpenHelper.CONTACT_TABLE.toString(), null, values);
 
-
-
         }
         pic.recycle();
+        String sql2="select " +
+                MySQLiteOpenHelper.CONTACT_HOLDER + ","+
+                MySQLiteOpenHelper.CONTACT_ID + ","+
+                MySQLiteOpenHelper.CONTACT_NAME +
+                " from " +
+                MySQLiteOpenHelper.CONTACT_TABLE;
+
+        Cursor cursor2 = db.rawQuery(sql2, null);
+        Log.i("ZZZZ", "onItemClick: " + cursor2.getCount());
+        if(cursor2.getCount() != 0) {
+            cursor2.moveToLast();
+            for(int i=0; i<cursor2.getCount(); i++) {
+
+                Log.i("ZZZZZZ", "onItemClick: "+cursor2.getString(0) +" "+ cursor2.getString(1) +" "+ cursor2.getString(2));
+                cursor2.moveToPrevious();
+            }
+        }
+
+        cursor2.close();
+
     }
 
 

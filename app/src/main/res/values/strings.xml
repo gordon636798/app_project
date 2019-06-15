@@ -110,7 +110,7 @@
         <item>★4奥沢 美咲［ここがあたしの居場所]</item>
     </string-array>
 
-    <string-array name = "band">
+    <string-array name="band">
         <item>ppp</item>
         <item>ppp</item>
         <item>ppp</item>
@@ -534,7 +534,7 @@
         <item>34084</item>
     </string-array>
 
-    <string-array name = "pic">
+    <string-array name="pic">
         <item>@drawable/pp0</item>
         <item>@drawable/pp1</item>
         <item>@drawable/pp2</item>
@@ -638,5 +638,8 @@
         <item>@drawable/pp100</item>
         <item>@drawable/pp101</item>
         <item>@drawable/pp102</item>
-    </string-array>>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>>
 </resources>

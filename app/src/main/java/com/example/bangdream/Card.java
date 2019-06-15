@@ -11,9 +11,11 @@ public class Card {
     public String score;
     public int pic;
     public boolean holder;
+    public int primary;
 
-    public Card(String name,String band,String attr,String skill,String score,int pic,boolean holder)
+    public Card(String name,String band,String attr,String skill,String score,int pic,boolean holder,int primary)
     {
+        this.primary=primary;
         this.name = name;
         this.band = band;
         this.attr = attr;
