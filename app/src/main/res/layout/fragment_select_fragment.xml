@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fbimg"
     android:orientation="vertical"
     tools:context=".select_fragment">
 
@@ -15,9 +16,10 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="71dp"
+            android:layout_height="48dp"
             android:layout_weight="1.5"
+            app:srcCompat="@drawable/attr2"
             tools:src="@tools:sample/avatars" />
 
         <CheckBox
@@ -25,8 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1"
-            />
+            android:drawableRight="@drawable/redimg" />
 
 
         <CheckBox
@@ -34,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2" />
+            android:drawableRight="@drawable/blueimg" />
 
 
         <CheckBox
@@ -42,14 +43,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3" />
+            android:drawableRight="@drawable/greenimg" />
 
         <CheckBox
             android:id="@+id/orange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="4" />
+            android:drawableRight="@drawable/orangeimg" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,9 +61,10 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="71dp"
+            android:layout_height="33dp"
             android:layout_weight="1"
+            app:srcCompat="@drawable/band2"
             tools:src="@tools:sample/avatars" />
 
         <CheckBox
@@ -70,35 +72,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="PPP" />
 
         <CheckBox
             android:id="@+id/af"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="AF" />
 
         <CheckBox
             android:id="@+id/PP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="PP" />
 
         <CheckBox
             android:id="@+id/R"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="4" />
+            android:text="R" />
 
         <CheckBox
             android:id="@+id/HHW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="5" />
+            android:text="HHW" />
     </LinearLayout>
 
     <LinearLayout
@@ -109,18 +111,18 @@
 
         <Button
             android:id="@+id/OK"
-            android:layout_width="112dp"
-            android:layout_height="224dp"
-            android:layout_weight="1"
-            android:drawableBottom="@drawable/check"
-            android:text="OK" />
-
-        <Button
-            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Concel" />
+            android:text="OK" />
+
+        <Button
+            android:id="@+id/RESET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RESET" />
+
     </LinearLayout>
 
 </LinearLayout>
