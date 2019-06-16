@@ -19,7 +19,8 @@
             android:layout_width="71dp"
             android:layout_height="48dp"
             android:layout_weight="1.5"
-            tools:src="@drawable/attr2" />
+            app:srcCompat="@drawable/attr2"
+            tools:src="@tools:sample/avatars" />
 
 
         <CheckBox
@@ -71,7 +72,7 @@
             android:layout_width="71dp"
             android:layout_height="33dp"
             android:layout_weight="1"
-            tools:src="@drawable/band2" />
+            app:srcCompat="@drawable/band2" />
 
 
         <CheckBox
